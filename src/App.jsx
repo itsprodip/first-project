@@ -1,13 +1,24 @@
 import Explore from "./components/explore";
-import ToDo from './components/Todo'
-import Fruits from './components/Fruits';
+import ToDo from "./components/Todo";
+import Fruits from "./components/Fruits";
+import Singers from "./components/Singers";
 function App() {
-  const fruits=['Mango','Jack fruit','Pinapple','Banana',];
+  const fruits = ["Mango", "Jack fruit", "Pinapple", "Banana"];
+  const singers = [
+    { id: 1, name: "Arijit Singh", age: 32 },
+    { id: 2, name: "Shreya Ghosal", age: 28 },
+    { id: 3, name: "Kumar Shanu", age: 58 },
+    { id: 4, name: "Atif Aslam", age: 45 },
+  ];
   return (
     <>
     {
-      fruits.map(fruit=> <Fruits fruit={fruit}></Fruits>)
-    }
+      singers.map(singersss=><Singers id={singersss.id} name={singersss.name} age={singersss.age}></Singers>
+  )}
+    
+      {fruits.map((fruit) => (
+        <Fruits fruit={fruit}></Fruits>
+      ))}
       <Explore />
       <ToDo task="Learn React" isDone={true}></ToDo>
       <ToDo task="Revise js" isDone={false}></ToDo>
