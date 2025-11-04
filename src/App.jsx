@@ -1,8 +1,13 @@
 import Explore from "./components/explore";
 import ToDo from './components/Todo'
+import Fruits from './components/Fruits';
 function App() {
+  const fruits=['Mango','Jack fruit','Pinapple','Banana',];
   return (
     <>
+    {
+      fruits.map(fruit=> <Fruits fruit={fruit}></Fruits>)
+    }
       <Explore />
       <ToDo task="Learn React" isDone={true}></ToDo>
       <ToDo task="Revise js" isDone={false}></ToDo>
